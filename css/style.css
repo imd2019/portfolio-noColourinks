@@ -14,4 +14,13 @@ html, body {
     background-color: #000;
 }
 
+nav {
+    position: fixed;
+    width: 100px;
+    height: 100vh;
+    background-color: aqua;
+}
 
+nav.closed {
+    left: - 100px;
+}
