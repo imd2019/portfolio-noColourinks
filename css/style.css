@@ -1,0 +1,154 @@
+@font-face { font-family: 'Bebas';
+    src: url('../files/BebasNeue-Regular.ttf') format('truetype'); }
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    position: fixed;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+}
+
+nav {
+    position: fixed;
+    width: 140px;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.3);
+}
+
+body.NavOpen nav {
+    left: 0px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+body.NavClosed nav {
+    left: -140px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+nav ul {
+    display: flex;
+    padding: 20px;
+    width: calc(100% - 40px);
+    flex-direction: column-reverse;
+    height: calc(100vh - 40px);
+}
+
+li {
+    left: -140px;
+}
+
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: #24FFFF;
+    font-family: 'Bebas';
+    font-size: 25px;
+}
+
+.navBurger {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+
+.navBurger a {
+    color: #24FFFF;
+    padding: 0;
+    cursor: pointer;
+    font-size: 25px;
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+}
+
+.image {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mouseRocket {
+    background-image: url(/img/MouseUfoWhite.svg);
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+    position: absolute;
+    animation: fly 3s infinite ease-in-out;
+    -webkit-animation: fly 3s infinite ease-in-out;
+  /*  mix-blend-mode: difference;*/
+}
+
+@keyframes fly {
+    0% {background-position-y: 0%;}
+    50% {background-position-y: 100%;}
+    100% {background-position-y: 0%;}
+}
+
+div.ImgNav {
+    position: absolute;
+    width: 25%;
+    height: 100vh;
+    left: 25%;
+    border: 1px solid pink;
+    top: 0;
+}
+
+div.About {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    left: 50%;
+    border: 1px solid green;
+}
+
+.Profile {
+    background-image: url(../img/Profile.png);
+    position: absolute;
+    width: 35vw;
+    height: 100vh;
+    left: 0;
+    background-size: contain;
+}
+
+.ArtSun {
+    background-image: url(../img/Artsun.svg);
+    height: 10vh;
+    position: absolute;
+    width: 17vw;
+    left: 68%;
+    top: 2vh;
+}
+
+.CodeStar {
+    background-image: url(../img/CodeStar.svg);
+    height: 21vh;
+    position: absolute;
+    width: 12vw;
+    left: 1%;
+    top: 39vh;
+}
+
+.DesignSaturn {
+    background-image: url(../img/DesignSaturn.svg);
+    height: 10vw;
+    position: absolute;
+    width: 17vw;
+    left: 33%;
+    top: 73vh;
+}
